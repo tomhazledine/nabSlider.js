@@ -76,18 +76,57 @@ body {
   height: 20em;
   position: relative;
   overflow: hidden;
+  width: 100%;
 }
 
 .sliderInner {
   position: absolute;
   top: 0;
   left: 0;
-  width: 400%;
   height: 100%;
   background: red;
+  -webkit-transition: left;
+  transition: left;
+  -webkit-transition-duration: .3s;
+  transition-duration: .3s;
+}
+.sliderInner.positionNumber1 {
+  left: 0;
+}
+.sliderInner.positionNumber2 {
+  left: -100%;
+}
+.sliderInner.positionNumber3 {
+  left: -200%;
+}
+.sliderInner.positionNumber4 {
+  left: -300%;
+}
+.sliderInner.positionNumber5 {
+  left: -400%;
+}
+.sliderInner.positionNumber6 {
+  left: -500%;
+}
+.sliderInner.positionNumber7 {
+  left: -600%;
+}
+.sliderInner.positionNumber8 {
+  left: -700%;
+}
+.sliderInner.positionNumber9 {
+  left: -800%;
+}
+.sliderInner.positionNumber10 {
+  left: -900%;
+}
+.sliderInner.positionNumber11 {
+  left: -1000%;
+}
+.sliderInner.positionNumber12 {
+  left: -1100%;
 }
 .sliderInner .slide {
   float: left;
-  width: 25%;
   height: 100%;
 }
