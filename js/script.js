@@ -36,6 +36,7 @@ function selectSlide(i){
   	selectorNumber = totalSlides;// Reset to 1 if the target slide # is lower than the total number of slides
   }
   window.currentSelector = ".selector.number" + selectorNumber;// Find the class for the target selector button
+  window.currentSlidePanel = ".slide.number" + selectorNumber;// Find the class for the target slide
   window.slideInner.attr('class',
            function(i, c){
               return c.replace(/(^|\s)positionNumber\S+/g, '');
@@ -43,6 +44,8 @@ function selectSlide(i){
   window.slideInner.addClass("positionNumber" + selectorNumber);// Add the target position class
   window.selectors.removeClass("current");// Strip "current" class from all selector buttons 
   $(currentSelector).addClass("current");// Add "current" class to target selector button
+  window.slide.removeClass("current");// Strip "current" class from all slides
+  $(currentSlidePanel).addClass("current");// Add "current" class to target slide
   window.currentSlide = selectorNumber;// Set the "currentSlide"
   
   //window.currentSlide++;// Advance the panel counter by 1
