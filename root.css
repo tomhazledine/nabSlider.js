@@ -71,20 +71,36 @@ body {
   margin: 0 auto;
 }
 
+.slide {
+  background: #ddd;
+}
+.slide:nth-of-type(2n) {
+  background: #bbb;
+}
+
+.selector.current {
+  background: black;
+  color: white;
+}
+
 .sliderOuter {
-  background: yellow;
   height: 20em;
   position: relative;
   overflow: hidden;
   width: 100%;
 }
 
-.slideWrapperTotal.slideOver .sliderInner {
+.sliderInner {
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
-  background: red;
+}
+.sliderInner .slide {
+  height: 100%;
+}
+
+.slideWrapperTotal.slideOver .sliderInner {
   -webkit-transition: left;
   transition: left;
   -webkit-transition-duration: .3s;
@@ -128,27 +144,16 @@ body {
 }
 .slideWrapperTotal.slideOver .sliderInner .slide {
   float: left;
-  height: 100%;
 }
 
 .slideWrapperTotal.fadeIn .sliderInner {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  -webkit-transition: left;
-  transition: left;
-  -webkit-transition-duration: .3s;
-  transition-duration: .3s;
 }
 .slideWrapperTotal.fadeIn .sliderInner .slide {
   width: 100%;
-  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  background: red;
   z-index: 0;
   opacity: 0;
   -webkit-transition: opacity;
@@ -159,16 +164,4 @@ body {
 .slideWrapperTotal.fadeIn .sliderInner .slide.current {
   z-index: 100;
   opacity: 1;
-}
-.slideWrapperTotal.fadeIn .sliderInner .slide.number2 {
-  background: blue;
-}
-.slideWrapperTotal.fadeIn .sliderInner .slide.number3 {
-  background: green;
-}
-.slideWrapperTotal.fadeIn .sliderInner .slide.number4 {
-  background: teal;
-}
-.slideWrapperTotal.fadeIn .sliderInner .slide.number2 {
-  background: blue;
 }

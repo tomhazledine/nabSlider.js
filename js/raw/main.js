@@ -9,6 +9,7 @@
 // Modes
 var modeFadeIn = false;
 var modeSlideOver = true;
+var masterAutoplay = false;
 // Elements:
 var moduleWrapper = $('.slideWrapperTotal');// The container for the slider and it's controls
 var slideOuter = $('.sliderOuter');// The container for just the slider
@@ -94,7 +95,7 @@ $(document).ready(function(){
   setInterval(triggerPanelChange, 4000);
 });
 function triggerPanelChange(){
-  if(autoPlay === true && window.windowFocus === true){
+  if(window.autoPlay === true && window.windowFocus === true && window.masterAutoplay === true){
     //console.log(window.targetSlide);
     selectSlide(window.targetSlide);// Move the slides
     //console.log(window.targetSlide);

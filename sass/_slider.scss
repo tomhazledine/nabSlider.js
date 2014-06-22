@@ -1,19 +1,21 @@
 .sliderOuter{
-  background:yellow;
   height:20em;
   position:relative;
   overflow:hidden;
   width:100%;
 }
 
-// "Slide Across" mechanic
-.slideWrapperTotal.slideOver .sliderInner{
+// Global slide styles
+.sliderInner{
   position:absolute;
   top:0;
   left:0;
-  //width:400%;
   height:100%;
-  background:red;
+  .slide{height:100%;}
+}
+
+// "Slide Across" mechanic
+.slideWrapperTotal.slideOver .sliderInner{
   transition:left;
   transition-duration:.3s;
   &.positionNumber1{left:0;}
@@ -28,29 +30,17 @@
   &.positionNumber10{left:-900%;}
   &.positionNumber11{left:-1000%;}
   &.positionNumber12{left:-1100%;}
-  .slide{
-    float:left;
-    //width:(100% / 4);
-    height:100%;
-  }
+  .slide{float:left;}
 }
 
 // "Fade In" mechanic
 .slideWrapperTotal.fadeIn .sliderInner{
-  position:absolute;
-  top:0;
-  left:0;
   width:100%;
-  height:100%;
-  transition:left;
-  transition-duration:.3s;
   .slide{
     width:100%;
-    height:100%;
     position:absolute;
     top:0;
     left:0;
-    background:red;
     z-index:0;
     opacity:0;
     transition:opacity;
@@ -59,10 +49,5 @@
       z-index:100;
       opacity:1;
     }
-    &.number2{background:blue;}
-    &.number3{background:green;}
-    &.number4{background:teal;}
-    //&.number5{background:yellow;}
-    &.number2{background:blue;}
   }
 }

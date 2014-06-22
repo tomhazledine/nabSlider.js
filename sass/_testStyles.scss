@@ -26,3 +26,11 @@ body{
   max-width:50em;
   margin:0 auto;
 }
+.slide{
+  background:#ddd;
+  &:nth-of-type(2n){background:#bbb;}
+}
+.selector.current{
+  background:black;
+  color:white;
+}
