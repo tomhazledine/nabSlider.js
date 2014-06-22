@@ -6,22 +6,23 @@
 
 //02. Slide Set-up
 // Our variables:
+// Modes
+var modeFadeIn = false;
+var modeSlideOver = true;
 // Elements:
-var moduleWrapper = $('.slideWrapperTotal');
-var slideOuter = $('.sliderOuter');
-var slideInner = $('.sliderInner');
-var slide = $('.slide');
-var selectors = $('.selector');
-var nextButton = $('.nextPrev.next');
-var prevButton = $('.nextPrev.prev');
+var moduleWrapper = $('.slideWrapperTotal');// The container for the slider and it's controls
+var slideOuter = $('.sliderOuter');// The container for just the slider
+var slideInner = $('.sliderInner');// The slider inner; used for positioning when using the "Slide Over" method.
+var slide = $('.slide');// The individual slides
+var selectors = $('.selector');// The individual controls
+var nextButton = $('.nextPrev.next');// Press this button to move to the next slide.
+var prevButton = $('.nextPrev.prev');// Press this button to move to the previous slide.
 // Initial values:
 var totalSlides = 0;
 var targetSlide = 2;
+var previousSlide = 4;
 var autoPlay = true;
 var windowFocus = true;
-// Modes
-var modeFadeIn = true;
-var modeSlideOver = false;
 
 // If modeSlideOver = true, set slide widths appropriately 
 function setSlideWidths(slideNum){
@@ -32,9 +33,16 @@ function setSlideWidths(slideNum){
 }
 $(document).ready(function(){
 	window.totalSlides = slide.length;// Count the slides
-  if(modeSlideOver == true){
+  if(modeSlideOver === true){
+    window.moduleWrapper.removeClass('fadeIn');
+    window.moduleWrapper.addClass('slideOver');
 	  setSlideWidths(totalSlides);// use the number-of-slides to set up the widths of the sliderInner and slides
-  }});
+  }else if(modeFadeIn === true){
+    window.moduleWrapper.removeClass('slideOver');
+    window.moduleWrapper.addClass('fadeIn');
+  }
+});
+
 
 // Change to the slide of a given number (i)
 function selectSlide(i){
@@ -85,18 +93,25 @@ moduleWrapper.hover(
 $(document).ready(function(){
   setInterval(triggerPanelChange, 4000);
 });
-
-var ctr = 0;
 function triggerPanelChange(){
-  //console.log(window.ctr);
-  //window.ctr++;
-  //console.log(window.targetSlide);
-  //window.targetSlide++;
-
   if(autoPlay === true && window.windowFocus === true){
-    console.log(window.targetSlide);
-    selectSlide(window.targetSlide);// Move the panels
-    //window.targetSlide++;
-    console.log(window.targetSlide);
+    //console.log(window.targetSlide);
+    selectSlide(window.targetSlide);// Move the slides
+    //console.log(window.targetSlide);
   }
 }
+
+// "Next" Button
+$(document).ready(function(){
+  window.nextButton.click(function(){
+    selectSlide(window.targetSlide);// Move the panels forwards
+  });
+});
+
+// "Previous" Button
+$(document).ready(function(){
+  window.prevButton.click(function(){
+    previousSlide = window.targetSlide - 2;
+    selectSlide(previousSlide);
+  });
+});

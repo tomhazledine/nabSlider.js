@@ -6,9 +6,8 @@
   width:100%;
 }
 
-/*
 // "Slide Across" mechanic
-.sliderInner{
+.slideWrapperTotal.slideOver .sliderInner{
   position:absolute;
   top:0;
   left:0;
@@ -35,11 +34,9 @@
     height:100%;
   }
 }
-//*/
 
-//*
 // "Fade In" mechanic
-.sliderInner{
+.slideWrapperTotal.fadeIn .sliderInner{
   position:absolute;
   top:0;
   left:0;
@@ -69,4 +66,3 @@
     &.number2{background:blue;}
   }
 }
-//*/
