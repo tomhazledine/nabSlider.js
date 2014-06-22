@@ -13,6 +13,10 @@ var slide = $('.slide');
 var selectors = $('.selector');
 // Initial values:
 var totalSlides = 0;
+// Selectors
+var modeFadeIn = true;
+var modeSlideOver = false;
+
 
 
 function setSlideWidths(slideNum){
@@ -24,7 +28,9 @@ function setSlideWidths(slideNum){
 
 $(document).ready(function(){
 	window.totalSlides = slide.length;// Count the slides
-	setSlideWidths(totalSlides);// use the number-of-slides to set up the widths of the sliderInner and slides
+  if(modeSlideOver == true){
+	  setSlideWidths(totalSlides);// use the number-of-slides to set up the widths of the sliderInner and slides
+  }
 });
 
 // Change to the slide of a given number (i)
