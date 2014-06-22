@@ -77,6 +77,7 @@ gulp.task('scripts', function() {
     'js/raw/*.js'//,
     //'js/vendor/*.js'
   ])
+  .on('error', function(err) {})
   .pipe(concat('script.js'))
   .pipe(gulp.dest('js'))
   .pipe(rename('script.min.js'))

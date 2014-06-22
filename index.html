@@ -21,34 +21,41 @@
   <section class="mainContent">
     <h2>Main Content</h2>
 
-    <div class="sliderOuter">
-      <div class="sliderInner clearfix">
-        <article class="slide number1" data-selector="1">
-          <h3>Slide One</h3>
-        </article>
+    <div class="slideWrapperTotal">
 
-        <article class="slide number2" data-selector="2">
-          <h3>Slide Two</h3>
-        </article>
+      <div class="sliderOuter">
+        <div class="sliderInner clearfix">
+          <article class="slide number1 current" data-selector="1">
+            <h3>Slide One</h3>
+          </article>
+  
+          <article class="slide number2" data-selector="2">
+            <h3>Slide Two</h3>
+          </article>
+  
+          <article class="slide number3" data-selector="3">
+            <h3>Slide Three</h3>
+          </article>
+  
+          <article class="slide number4" data-selector="4">
+            <h3>Slide Four</h3>
+          </article>
+  
+        </div>
+      </div>
 
-        <article class="slide number3" data-selector="3">
-          <h3>Slide Three</h3>
-        </article>
+      <div class="selectors">
+        <button class="selector number1 current" data-selector="1">Select slide one</button>
+        <button class="selector number2" data-selector="2">Select slide two</button>
+        <button class="selector number3" data-selector="3">Select slide three</button>
+        <button class="selector number4" data-selector="4">Select slide four</button>
 
-        <article class="slide number4" data-selector="4">
-          <h3>Slide Four</h3>
-        </article>
-
+        <button class="nextPrev prev">Previous</button>
+        <button class="nextPrev next">Next</button>
       </div>
     </div>
-  </section>
 
-  <div class="selectors">
-    <button class="selector number1" data-selector="1">Select slide one</button>
-    <button class="selector number2" data-selector="2">Select slide two</button>
-    <button class="selector number3" data-selector="3">Select slide three</button>
-    <button class="selector number4" data-selector="4">Select slide four</button>
-  </div>
+  </section>
 
   <footer>
     <!-- Javascript, starting with jQuery -->
