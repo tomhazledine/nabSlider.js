@@ -7,9 +7,9 @@
 //02. Slide Set-up
 // Our variables:
 // Modes
-var modeFadeIn = false;
-var modeSlideOver = true;
-var masterAutoplay = false;
+var modeFadeIn = true;
+var modeSlideOver = false;
+var masterAutoplay = true;
 // Elements:
 var moduleWrapper = $('.slideWrapperTotal');// The container for the slider and it's controls
 var slideOuter = $('.sliderOuter');// The container for just the slider
