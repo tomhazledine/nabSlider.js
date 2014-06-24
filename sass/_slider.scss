@@ -15,7 +15,7 @@
 }
 
 // "Slide Across" mechanic
-.slideWrapperTotal.slideOver .sliderInner{
+.slideOver .sliderInner{
   transition:left;
   transition-duration:.3s;
   &.positionNumber1{left:0;}
@@ -34,7 +34,7 @@
 }
 
 // "Fade In" mechanic
-.slideWrapperTotal.fadeIn .sliderInner{
+.fadeIn .sliderInner{
   width:100%;
   .slide{
     width:100%;

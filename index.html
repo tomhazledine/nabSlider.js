@@ -18,13 +18,52 @@
     <h1>jsSlider</h1>
   </header>
   
-  <section class="mainContent">
+  <section class="mainContent slideOneWrapper">
     <h2>Main Content</h2>
 
     <div class="slideWrapperTotal">
 
       <div class="sliderOuter">
-        <div class="sliderInner clearfix">
+        <div class="sliderInner clearfix positionNumber1">
+          <article class="slide number1 current" data-selector="1">
+            <h3>Slide One</h3>
+          </article>
+  
+          <article class="slide number2" data-selector="2">
+            <h3>Slide Two</h3>
+          </article>
+  
+          <article class="slide number3" data-selector="3">
+            <h3>Slide Three</h3>
+          </article>
+  
+          <article class="slide number4" data-selector="4">
+            <h3>Slide Four</h3>
+          </article>
+  
+        </div>
+      </div>
+
+      <div class="selectors">
+        <button class="selector number1 current" data-selector="1">Select slide one</button>
+        <button class="selector number2" data-selector="2">Select slide two</button>
+        <button class="selector number3" data-selector="3">Select slide three</button>
+        <button class="selector number4" data-selector="4">Select slide four</button>
+
+        <button class="nextPrev prev">Previous</button>
+        <button class="nextPrev next">Next</button>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="mainContent slideTwoWrapper">
+    <h2>Some More Main Content</h2>
+
+    <div class="secondSlideWrapperTotal">
+
+      <div class="sliderOuter">
+        <div class="sliderInner clearfix positionNumber1">
           <article class="slide number1 current" data-selector="1">
             <h3>Slide One</h3>
           </article>
@@ -58,6 +97,7 @@
   </section>
 
   <footer>
+    <h4>The Footer</h4>
     <!-- Javascript, starting with jQuery -->
     <script src='js/vendor/jquery-1.9.1.min.js'></script>
     <script src="js/script.js"></script>

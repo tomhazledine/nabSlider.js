@@ -83,6 +83,12 @@ body {
   color: white;
 }
 
+footer {
+  margin-top: 4em;
+  border-top: .1em solid black;
+  padding: 1em 0;
+}
+
 .sliderOuter {
   height: 20em;
   position: relative;
@@ -100,56 +106,56 @@ body {
   height: 100%;
 }
 
-.slideWrapperTotal.slideOver .sliderInner {
+.slideOver .sliderInner {
   -webkit-transition: left;
   transition: left;
   -webkit-transition-duration: .3s;
   transition-duration: .3s;
 }
-.slideWrapperTotal.slideOver .sliderInner.positionNumber1 {
+.slideOver .sliderInner.positionNumber1 {
   left: 0;
 }
-.slideWrapperTotal.slideOver .sliderInner.positionNumber2 {
+.slideOver .sliderInner.positionNumber2 {
   left: -100%;
 }
-.slideWrapperTotal.slideOver .sliderInner.positionNumber3 {
+.slideOver .sliderInner.positionNumber3 {
   left: -200%;
 }
-.slideWrapperTotal.slideOver .sliderInner.positionNumber4 {
+.slideOver .sliderInner.positionNumber4 {
   left: -300%;
 }
-.slideWrapperTotal.slideOver .sliderInner.positionNumber5 {
+.slideOver .sliderInner.positionNumber5 {
   left: -400%;
 }
-.slideWrapperTotal.slideOver .sliderInner.positionNumber6 {
+.slideOver .sliderInner.positionNumber6 {
   left: -500%;
 }
-.slideWrapperTotal.slideOver .sliderInner.positionNumber7 {
+.slideOver .sliderInner.positionNumber7 {
   left: -600%;
 }
-.slideWrapperTotal.slideOver .sliderInner.positionNumber8 {
+.slideOver .sliderInner.positionNumber8 {
   left: -700%;
 }
-.slideWrapperTotal.slideOver .sliderInner.positionNumber9 {
+.slideOver .sliderInner.positionNumber9 {
   left: -800%;
 }
-.slideWrapperTotal.slideOver .sliderInner.positionNumber10 {
+.slideOver .sliderInner.positionNumber10 {
   left: -900%;
 }
-.slideWrapperTotal.slideOver .sliderInner.positionNumber11 {
+.slideOver .sliderInner.positionNumber11 {
   left: -1000%;
 }
-.slideWrapperTotal.slideOver .sliderInner.positionNumber12 {
+.slideOver .sliderInner.positionNumber12 {
   left: -1100%;
 }
-.slideWrapperTotal.slideOver .sliderInner .slide {
+.slideOver .sliderInner .slide {
   float: left;
 }
 
-.slideWrapperTotal.fadeIn .sliderInner {
+.fadeIn .sliderInner {
   width: 100%;
 }
-.slideWrapperTotal.fadeIn .sliderInner .slide {
+.fadeIn .sliderInner .slide {
   width: 100%;
   position: absolute;
   top: 0;
@@ -161,7 +167,7 @@ body {
   -webkit-transition-duration: .3s;
   transition-duration: .3s;
 }
-.slideWrapperTotal.fadeIn .sliderInner .slide.current {
+.fadeIn .sliderInner .slide.current {
   z-index: 100;
   opacity: 1;
 }
