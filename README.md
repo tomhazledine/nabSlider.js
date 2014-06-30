@@ -1,4 +1,4 @@
-# NAB Slider
+# NAB Slider.js
 
 ## “Not another bloody slider...”
 
