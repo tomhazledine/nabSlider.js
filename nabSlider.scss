@@ -1,0 +1,53 @@
+.sliderOuter{
+  height:20em;
+  position:relative;
+  overflow:hidden;
+  width:100%;
+}
+
+// Global slide styles
+.sliderInner{
+  position:absolute;
+  top:0;
+  left:0;
+  height:100%;
+  .slide{height:100%;}
+}
+
+// "Slide Across" mechanic
+.slideOver .sliderInner{
+  transition:left;
+  transition-duration:.3s;
+  &.positionNumber1{left:0;}
+  &.positionNumber2{left:-100%;}
+  &.positionNumber3{left:-200%;}
+  &.positionNumber4{left:-300%;}
+  &.positionNumber5{left:-400%;}
+  &.positionNumber6{left:-500%;}
+  &.positionNumber7{left:-600%;}
+  &.positionNumber8{left:-700%;}
+  &.positionNumber9{left:-800%;}
+  &.positionNumber10{left:-900%;}
+  &.positionNumber11{left:-1000%;}
+  &.positionNumber12{left:-1100%;}
+  .slide{float:left;}
+}
+
+// "Fade In" mechanic
+.fadeIn .sliderInner{
+  width:100%;
+  .slide{
+    width:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:0;
+    opacity:0;
+    transition:opacity;
+    transition-duration:.3s;
+    &.current{
+      z-index:100;
+      opacity:1;
+    }
+  }
+}
