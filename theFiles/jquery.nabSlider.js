@@ -8,7 +8,7 @@
 */
 
 (function($){
-  $.fn.tfhSlider = function(mode,autoplay){
+  $.fn.nabSlider = function(mode,autoplay){
 
     // Our variables:
     // Options
