@@ -53,7 +53,7 @@ the slider itself, which sits within two divs – a `sliderOuter` and `sliderInn
 
 The slides themselves, which are the things we want to switch between, can be anything you like. I use an `article` element because, hey, semantics! But you can use any `html` element you like.
 
-This important thing is that whatever kind of element you choose, you give it the following classes: `slide` (so the plugin knows it's a slide) and `numberX` (eg `number1` for the first slide, `number2` for the second, you get the idea...).
+The important thing is that whatever kind of element you choose, you give it the following classes: `slide` (so the plugin knows it's a slide) and `numberX` (eg `number1` for the first slide, `number2` for the second, you get the idea...).
 
 It must also have `data-selector` attribute that is the same as the slide number. For example, `data-selector="2"` for the slide with the class `number2`.
 
@@ -73,15 +73,15 @@ So in a slider that switches between three slides, you might see this:
 
 ### The Buttons
 
-For the slider to be useful, we need some way to control it. nabSlider has three methods for controlling the slider that can be used all together or in isolation:
+For the slider to be useful, we need some way to control it. **nabSlider** has three control methods that can be used all together or in isolation:
 
-* direct slide buttons: clicking one of these takes you straight to the relevant slide.
-* next and previous buttons: move you to the next or previous slide.
-* autoplay: automatically rotates to the next slide after a given time period (4 seconds, by default)
+* **Direct slide buttons**: clicking one of these takes you straight to the relevant slide.
+* **Next and previous buttons**: move you to the next or previous slide.
+* **Autoplay**: automatically rotates to the next slide after a given time period (4 seconds, by default)
 
-These methods can be used independently or in any combination. We'll come to the autoplay feature later, but the buttons are quite straightforward. I like to use `button` elements, but you can use any kind of element you like, provided you can give it the relevant classes.
+These methods can be used independently or in any combination. We'll come to the **Autoplay** feature later, but the buttons are quite straightforward. I like to use `button` elements, but you can use any kind of element you like, provided you can give it the relevant classes.
 
-### Direct Slide Buttons
+#### Direct Slide Buttons
 
 These buttons navigate directly to the corresponding slide. This is done by applying matching `numberX` classes and `data-selector="X"` attributes.
 
@@ -97,6 +97,16 @@ The controls for a three-slide slider would look something like this:
       // Button content, if you want any, goes here
     </button>
 
+#### Next/Previous Buttons
+
+These don't need a `data-selector` attribute, just two classes: `nextPrev` to denote the type of button it is, and either `next` or `prev` to further narrow it down.
+
+    <button class="nextPrev prev"></button>
+    <button class="nextPrev next"></button>
+
+#### Autoplay
+
+The Autoplay setting is currently either `true` or `false`; which is to say it's either on or off. This state is decalred in the scripts file when an instance of the slider is created. More options will be available soon (hopefully).
 
 --- 
 
