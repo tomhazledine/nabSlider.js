@@ -1,8 +1,8 @@
-# NAB Slider.js
+# **NAB Slider.js**: “Not another bloody slider...”
 
-## “Not another bloody slider...”
+## Overview
 
-### A lightweight slider with controls and optional autoplay.
+A lightweight slider with controls and optional autoplay.
 
 All the heavy lifting is done using some simple CSS/SASS, so **NAB Slider.js** is fully responisive and customizable right out of the box. All the jQuery does is add and remove the classes that trigger the CSS magic.
 
