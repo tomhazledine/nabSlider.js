@@ -3,48 +3,53 @@
   <meta charset="utf-8">
   <title>nabSlider.js</title>
   <link rel="stylesheet" href="style.css">
+  <!-- Google Font (Open Sans) -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800italic' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
   
   <header>
-    <h1>jsSlider</h1>
+    <h1>nabSlider.js</h1>
+    <h3>(“Not Another Bloody Slider Plugin...“)</h3>
   </header>
   
   <section class="mainContent slideOneWrapper">
-    <h2>Main Content</h2>
 
-    <div class="slideWrapperTotal">
+    <div class="sliderOne">
+      <button class="nextPrev prev"><</button>
+      <button class="nextPrev next">></button>
 
       <div class="sliderOuter">
         <div class="sliderInner clearfix positionNumber1">
           <article class="slide number1 current" data-selector="1">
-            <h3>Slide One</h3>
+            <h2>Slide One</h2>
           </article>
-  
           <article class="slide number2" data-selector="2">
-            <h3>Slide Two</h3>
+            <h2>Slide Two</h2>
           </article>
-  
           <article class="slide number3" data-selector="3">
-            <h3>Slide Three</h3>
+            <h2>Slide Three</h2>
           </article>
-  
           <article class="slide number4" data-selector="4">
-            <h3>Slide Four</h3>
+            <h2>Slide Four</h2>
           </article>
-  
+          <article class="slide number5" data-selector="5">
+            <h2>Slide Five</h2>
+          </article>
+          <article class="slide number6" data-selector="6">
+            <h2>Slide Six</h2>
+          </article>
         </div>
       </div>
 
-      <div class="selectors">
-        <button class="selector number1 current" data-selector="1">Select slide one</button>
-        <button class="selector number2" data-selector="2">Select slide two</button>
-        <button class="selector number3" data-selector="3">Select slide three</button>
-        <button class="selector number4" data-selector="4">Select slide four</button>
-
-        <button class="nextPrev prev">Previous</button>
-        <button class="nextPrev next">Next</button>
+      <div class="selectors clearfix">
+        <button class="selector number1 current" data-selector="1"></button>
+        <button class="selector number2" data-selector="2"></button>
+        <button class="selector number3" data-selector="3"></button>
+        <button class="selector number4" data-selector="4"></button>
+        <button class="selector number5" data-selector="5"></button>
+        <button class="selector number6" data-selector="6"></button>
       </div>
     </div>
 
@@ -94,7 +99,7 @@
     <!-- Javascript, starting with jQuery -->
     <script src='js/jquery-1.9.1.min.js'></script>
     <script src='js/jquery.nabSlider.min.js'></script>
-    <script src="js/script.js"></script>
+    <script src="js/script.min.js"></script>
   </footer>
 
 </body>

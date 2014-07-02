@@ -1,16 +1,127 @@
+
+// Variables and Mixins
+$type:"Open Sans",sans-serif;//400, 800 italic
+$background:#0000ff;
+$black:#333;
+$grey:#666;
+$white:#ffffff;
+@mixin displayText{
+  font-style:italic;
+  font-weight:800;
+}
+@mixin button($background,$color,$width){
+  appearance:none;
+  background:$background;
+  color:$color;
+  border:0;
+  @include displayText;
+  text-transform:uppercase;
+  padding:1em;
+  margin:.5em;
+  display:block;
+  width:$width;
+  outline:none;
+  cursor:pointer;
+  transition:background, color;
+  transition-duration:.3s;
+}
+
+// Global Styles
+body{
+  font-family:$type;
+  margin:0 auto;
+  background:$grey;
+  color:white;
+}
+h1,h2,h3,h4,h5{
+  @include displayText;
+}
+button{
+  @include button($grey,$white,auto);
+  &:hover{background:red;}
+  &.current{background:$black;}
+  float:left;
+}
+
+// Slide One
+.sliderOne{
+  position:relative;
+  margin:6em 0;
+  .slide{
+    padding:3em 0;
+    text-align:center;
+    overflow:hidden;
+    h2{font-size:3em;}
+    &.number1{background:red;}
+    &.number2{background:green;}
+    &.number3{background:yellow;}
+    &.number4{background:teal;}
+    &.number5{background:orange;}
+    &.number6{background:blue;}
+  }
+  .selectors{
+    position:absolute;
+    bottom:1em;
+    z-index:2000;
+    width:(34 * 6)px;
+    padding:0;
+    margin:0;
+    left:50%;
+    margin-left:-6.5em;
+    //background:green;
+    .selector{
+      width:22px;
+      height:22px;
+      padding:0;
+      margin:6px;
+      background:none;
+      border:.2em solid $white;
+      border-radius:50%;
+      &:hover{background:$white;}
+      &.current{
+        background:$white;
+        cursor:default;
+      }
+    }
+  }
+  .nextPrev{
+    font-size:1.4em;
+    font-style:normal;
+    font-weight:400;
+    position:absolute;
+    text-align:center;
+    top:50%;
+    padding:1em;
+    margin:0;
+    margin-top:-1em;
+    line-height:1;
+    z-index:2000;
+    background:rgba($black,.6);
+    &:hover{background:$black;}
+    &.prev{
+      left:0;
+      border-radius:0 1em 1em 0;
+    }
+    &.next{
+      right:0;
+      border-radius:1em 0 0 1em;
+    }
+  }
+}
+
 h1{
   font-size:2em;
   //color:red;
   text-align:center;
-  padding:1em;
-  border-bottom:.1em solid black;
+  padding:1em 0 .2em 0;
+  //border-bottom:.1em solid black;
 }
 h2{
   font-size:1.5em;
   line-height:1;
   text-align:center;
   padding:.2em 0;
-  border-bottom:.1em solid black;
+  //border-bottom:.1em solid black;
   margin:.3em 0;
 }
 h3{
@@ -18,21 +129,16 @@ h3{
   line-height:1;
   text-align:center;
   padding:.2em 0;
-  border-bottom:.1em solid black;
+  //border-bottom:.1em solid black;
   margin:.3em 0;
-}
-body{
-  width:70%;
-  max-width:50em;
-  margin:0 auto;
 }
 .slide{
   background:#ddd;
   &:nth-of-type(2n){background:#bbb;}
 }
 .selector.current{
-  background:black;
-  color:white;
+  //background:black;
+  //color:white;
 }
 
 footer{

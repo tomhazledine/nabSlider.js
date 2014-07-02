@@ -5,5 +5,5 @@
 //$(document).ready(function(){alert("Main JS Working");});
 
 // 02. Instantiating nabSlider.js
-$('.slideWrapperTotal').nabSlider('fadeIn',true);
-$('.secondSlideWrapperTotal').nabSlider('slideOver',true);
+$('.sliderOne').nabSlider('slideOver',true);
+$('.secondSlideWrapperTotal').nabSlider('fadeIn',false);
